@@ -1,7 +1,8 @@
 description: >
   Command is used to trigger scans to Checkmarx and publish results in in Json format or using a desired
   bug tracker supported by CxFlow
-parameters:
+usage:
+ parameters:
   checkmarx-url:
     type: string
     default: "${CHECKMARX_URL}"
@@ -66,10 +67,10 @@ parameters:
     type: string
     default: "cx.json"
     description: "Report filename"
-steps:
-  - run:
-      name: Checkmarx Scan
-      command: |
+ steps:
+   - run:
+       name: Checkmarx Scan
+       command: |
         java -jar /app/cx-flow.jar \
         --scan \
         --cx-team="<< parameters.team >>" \
