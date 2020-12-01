@@ -66,11 +66,16 @@ parameters:
     type: string
     default: "cx.json"
     description: "Report filename"
+  scanners:
+    type: string
+    default: "sast"
+    description: "Vulnerablity Scanner to be used."
 steps:
   - run:
       name: Checkmarx Scan
       command: |
         java -jar /app/cx-flow.jar \
+        --spring.profiles.active="<< parameters.scanners >>" \
         --scan \
         --cx-team="<< parameters.team >>" \
         --cx-project="<< parameters.project >>" \
