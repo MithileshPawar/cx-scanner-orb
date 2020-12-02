@@ -71,6 +71,15 @@ parameters:
     default: "sast"
     description: "Vulnerablity Scanner to be used."
 steps:
+  - run: 
+      name: View files before <include>
+      command: find .
+  - run:
+      name: Use the include
+      command: <<include(scripts/application.yml)>>
+  - run: 
+      name: View files after <include>
+      command: find .
   - run:
       name: Checkmarx Scan
       command: |
