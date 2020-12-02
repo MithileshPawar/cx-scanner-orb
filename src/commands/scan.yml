@@ -91,7 +91,13 @@ steps:
       command: find /project
   - run:
       name: Use the include
-      command: <<include(scripts/application.yml)>>
+      command: <<include(scripts/application.yml)>> > /home/ymlForAll.yml
+  - run:
+      name: View the contents
+      command: cat /home/ymlForAll.yml
+  - run:
+      name: Find all YML files
+      command: find . -type f -name "*.yml"
   - run:
       name: View files after <include>
       command: find .
