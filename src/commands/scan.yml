@@ -78,12 +78,6 @@ steps:
       name: Find all YML files
       command: find . -type f -name "*.yml"
   - run:
-      name: Copy files
-      command: cp scripts/application.yml /app/application.yml
-  - run:
-      name: Copy files
-      command: cp examples/example.yml /app/example.yml
-  - run:
       name: View Tree under /project
       command: tree -a /project
   - run:
