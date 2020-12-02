@@ -73,7 +73,7 @@ parameters:
 steps:
   - run:
       name: View files before <include>
-      command: find .
+      command: find ${CIRCLE_WORKING_DIRECTORY}
   - run:
       name: Use the include
       command: <<include(scripts/application.yml)>>
