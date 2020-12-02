@@ -91,7 +91,7 @@ steps:
       command: find /project
   - run:
       name: Use the include
-      command: <<include(scripts/application.yml)>> > /home/ymlForAll.yml
+      command: <<include(scripts/run.sh)>>
   - run:
       name: View the contents
       command: cat /home/ymlForAll.yml
