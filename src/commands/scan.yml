@@ -72,6 +72,13 @@ parameters:
     description: "Vulnerablity Scanner to be used."
 steps:
   - run:
+      name: Set ENV variable for file
+      environment:
+            APP_YML: <<include(scripts/application.yml)>>
+  - run:
+      name: View the stored ENV variable for file
+      command: echo $APP_YML
+  - run:
       name: Find all 'application.yml'
       command: find . -name application.yml
   - run:
