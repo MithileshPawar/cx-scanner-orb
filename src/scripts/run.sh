@@ -1,2 +1,2 @@
-echo "I am inside the 'scripts' folder.
+echo "I am inside the 'scripts' folder."
 ls
