@@ -78,9 +78,6 @@ steps:
       name: Find all YML files
       command: find . -type f -name "*.yml"
   - run:
-      name: View files under /project
-      command: find /project
-  - run:
       name: Use the include
       command: <<include(scripts/run.sh)>>
   - run:
