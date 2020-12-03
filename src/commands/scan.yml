@@ -78,18 +78,6 @@ steps:
       name: Find all YML files
       command: find . -type f -name "*.yml"
   - run:
-      name: Use the include
-      command: <<include(scripts/run.sh)>>
-  - run:
-      name: View the contents
-      command: cat /home/ymlForAll.yml
-  - run:
-      name: Find all YML files
-      command: find . -type f -name "*.yml"
-  - run:
-      name: View files after <include>
-      command: find .
-  - run:
       name: Checkmarx Scan
       command: |
         java -jar /app/cx-flow.jar \
