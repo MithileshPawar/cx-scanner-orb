@@ -105,4 +105,5 @@ steps:
         --ast.clientId="CxFlow" \
         --ast.clientSecret="${AST_CLIENT_SECRET}" \
         --ast.preset="Checkmarx Default" \
+        --ast.incremental="false" \
         << parameters.params >>
