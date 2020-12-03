@@ -103,5 +103,6 @@ steps:
         --spring.profiles.active="ast" \
         --ast.apiUrl="http://ec2-3-249-214-110.eu-west-1.compute.amazonaws.com" \
         --ast.clientId="CxFlow" \
-        --ast.clientSecret= "${AST_CLIENT_SECRET}" \
+        --ast.clientSecret="${AST_CLIENT_SECRET}" \
+        --ast.preset="Checkmarx Default" \
         << parameters.params >>
